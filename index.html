@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News app</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()">
+                <img src="./assets/logo.png" alt="company's logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="items" id='World-Cup' onclick="onNavItemClick('ipl')">T20 World Cup 2024</li>
+                    <li class="items" id='Finance' onclick="onNavItemClick('Finance')">Finance</li>
+                    <li class="items" id='Politics' onclick="onNavItemClick('Politics')">Politics</li>
+                    <li class="items" id='Sports' onclick="onNavItemClick('sports')">Sports</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id = 'search-text' type="text" class="news-input" placeholder="e.g.Science">
+                <button id="search-button">Search</button>
+            </div>
+        </div>
+
+    </nav>
+    <main>
+        <div class="cards-container container flex" id='cards-container'>
+
+        </div>
+
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="" id='news-img'>
+            </div>
+            <div class="card-content">
+                <h3 id='news-title'>This is the Title</h3>
+                <h6 id='news-source'>End Gadget 7/06/2024</h6>
+                <p class="news-desc " id='news-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolorum nulla, expedita qui facilis exercitationem dignissimos? Doloribus, alias quis
+                    dignissimos beatae, ipsa repellat repudiandae facere expedita sapiente dolores enim nemo rerum?
+                </p>
+            </div>
+        </div>
+
+    </template>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
